@@ -4,6 +4,16 @@ Found the coding bit easy but struggled quite a lot with git specifically with t
 
 
 
+\##Story 2
+
+
+
+Found this story quite easy just placing components and a bit of simple coding.
+
+
+
+
+
 
 
 
