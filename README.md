@@ -22,6 +22,14 @@ Didn't know about the existence of The Arduino IDE and Programming section so ha
 
 
 
+# Story 4
+
+
+
+Took a bit of time to setup functions but straight forward.
+
+
+
 
 
 # 
