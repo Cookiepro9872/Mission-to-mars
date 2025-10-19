@@ -30,6 +30,14 @@ Took a bit of time to setup functions but straight forward.
 
 
 
+# Story 5
+
+
+
+Found it quite easy and made it so you can control the motor speed from the function. eg: forward(delay, left motor speed, right motor speed);
+
+
+
 
 
 # 
