@@ -38,6 +38,14 @@ Found it quite easy and made it so you can control the motor speed from the func
 
 
 
+# Story 6
+
+
+
+Found this story much tricker took me 2 hours mostly because of spelling mistakes and syntax errors. This is most likely because I'm doing this so late.
+
+
+
 
 
 # 
