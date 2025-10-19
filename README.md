@@ -18,11 +18,7 @@ Found this story quite easy just placing components and a bit of simple coding.
 
 
 
-Made a few stupid mistakes due to me using the top half of the breadboard but other than that pretty simple.
-
-
-
-
+Didn't know about the existence of The Arduino IDE and Programming section so had to completely redo this story but once I did know about it was pretty simple.
 
 
 
