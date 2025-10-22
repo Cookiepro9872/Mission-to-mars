@@ -46,6 +46,12 @@ Found this story much tricker took me 2 hours mostly because of spelling mistake
 
 
 
+# Story 7
+
+
+
+Had to email to confirm exactly what had to be done but once I understood it was really simple as I had functions for everything.
+
 
 
 # 
