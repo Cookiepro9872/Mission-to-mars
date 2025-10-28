@@ -54,5 +54,21 @@ Had to email to confirm exactly what had to be done but once I understood it was
 
 
 
+# Story 8
+
+
+
+Found this story quite easy.
+
+
+
+# Story 9
+
+
+
+Pretty much the same as story 8.
+
+
+
 # 
 
