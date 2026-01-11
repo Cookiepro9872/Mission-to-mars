@@ -70,5 +70,9 @@ Pretty much the same as story 8.
 
 
 
-# 
+# Story 10
+
+
+
+!\[Alt text for adding an image to your ReadMe](/Story\_10/Poster.jpg)
 
