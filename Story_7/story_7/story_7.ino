@@ -3,8 +3,14 @@
 #define LEFT_FWD 11
 #define LEFT_ENABLE 10
 #define RIGHT_ENABLE 9
-#define RIGHT_FWD 8
-#define RIGHT_REV 7
+#define RIGHT_FWD 7
+#define RIGHT_REV 8
+
+const int RIGHT_FEEDBACK = 2;
+const int LEFT_FEEDBACK = 3;
+
+volatile int leftcounter = 0; 
+volatile int rightcounter = 0; 
 
 void forward(int delaytime, int left_speed, int right_speed) {
   digitalWrite(LEFT_FWD, HIGH);
@@ -43,9 +49,23 @@ void right(int delaytime) {
   digitalWrite(RIGHT_FWD, LOW);
   digitalWrite(LEFT_ENABLE, HIGH);
   digitalWrite(RIGHT_ENABLE, HIGH);
+  delay(delaytime);
 }
 
 void stop() {
+  digitalWrite(LEFT_ENABLE, LOW);
+  digitalWrite(RIGHT_ENABLE, LOW);
+}
+
+void forward_count(int count, int speed) {
+  digitalWrite(LEFT_FWD, HIGH);
+  digitalWrite(RIGHT_FWD, HIGH);
+  digitalWrite(LEFT_REV, LOW);
+  digitalWrite(RIGHT_REV, LOW);
+  while(leftcounter < count) {
+    analogWrite(LEFT_ENABLE, speed);
+    analogWrite(RIGHT_ENABLE,  speed);
+  }
   digitalWrite(LEFT_ENABLE, LOW);
   digitalWrite(RIGHT_ENABLE, LOW);
 }
@@ -58,6 +78,10 @@ void setup()
   pinMode(RIGHT_ENABLE, OUTPUT);
   pinMode(RIGHT_FWD, OUTPUT);
   pinMode(RIGHT_REV, OUTPUT);
+
+  Serial.begin(115200);
+  attachInterrupt(digitalPinToInterrupt(LEFT_FEEDBACK),LeftMotorISR,RISING);
+  attachInterrupt(digitalPinToInterrupt(RIGHT_FEEDBACK),RightMotorISR,RISING);
 }
 
 void story4() {
@@ -69,8 +93,15 @@ void story4() {
   rev(2000, 255, 255);
 }
 
-void loop()
-{
+void LeftMotorISR(){
+  leftcounter++;
+}
+
+void RightMotorISR(){
+  rightcounter++;
+}
+
+void story5() {
   forward(2000, 255, 255);
 
   forward(2000, 100, 200);
@@ -80,4 +111,48 @@ void loop()
   forward(2000, 100, 200);
 
   forward(2000, 200, 100);
+}
+
+void story6() {
+  forward_count(870, 255);
+}
+
+void loop()
+{
+  forward(2000, 255, 255);
+
+  left(850);
+
+  forward(2000, 255, 255);
+
+  left(850);
+
+  forward(2000, 255, 255);
+
+  left(850);
+
+  forward(2000, 255, 255);
+
+  left(850);
+
+  forward(2000, 255, 255);
+
+  right(850);
+
+  forward(2000, 255, 255);
+
+  right(850);
+
+  forward(2000, 255, 255);
+
+  right(850);
+
+  forward(2000, 255, 255);
+
+  right(850);
+
+  stop();
+
+  exit(0);
+
 }

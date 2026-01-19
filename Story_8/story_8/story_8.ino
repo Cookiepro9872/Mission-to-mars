@@ -3,8 +3,8 @@
 #define LEFT_FWD 11
 #define LEFT_ENABLE 10
 #define RIGHT_ENABLE 9
-#define RIGHT_FWD 8
-#define RIGHT_REV 7
+#define RIGHT_FWD 7
+#define RIGHT_REV 8
 
 const int RIGHT_FEEDBACK = 2;
 const int LEFT_FEEDBACK = 3;
@@ -19,9 +19,6 @@ volatile int rightcounter = 0;
 #define MAX_DISTANCE 200
 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
-
-const int TRIGGER_DOWN = 13;
-const int ECHO_DOWN = 17;
 
 void forward(int delaytime, int left_speed, int right_speed) {
   digitalWrite(LEFT_FWD, HIGH);
@@ -96,7 +93,6 @@ void setup()
 
   Serial.begin(115200);
   int distance = sonar.ping_cm();
-
 }
 
 void story4() {
@@ -170,8 +166,8 @@ void story7() {
   exit(0);
 
 }
-
-void story8() {
+void loop()
+{
   int distance = sonar.ping_cm();
 
   if distance < 13 and distance > 0 {
@@ -184,21 +180,5 @@ void story8() {
     stop();
   } else {
     forward(50,255,255);
-  }
-}
-void loop()
-{
-  int disdown = sonar.ping_cm();
-
-  if disdown > 11 and disdown < 0 {
-    stop();
-
-    rev(500, 255, 255);
-
-    stop();
-
-    exit(0);
-  } else {
-    forward(50, 255, 255);
   }
 }

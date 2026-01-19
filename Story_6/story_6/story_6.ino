@@ -3,8 +3,8 @@
 #define LEFT_FWD 11
 #define LEFT_ENABLE 10
 #define RIGHT_ENABLE 9
-#define RIGHT_FWD 8
-#define RIGHT_REV 7
+#define RIGHT_FWD 7
+#define RIGHT_REV 8
 
 const int RIGHT_FEEDBACK = 2;
 const int LEFT_FEEDBACK = 3;
