@@ -74,5 +74,5 @@ Pretty much the same as story 8.
 
 
 
-!\[Alt text for adding an image to your ReadMe](/Story\_10/Poster.jpg)
+![Alt text for adding an image to your ReadMe](/Story\_10/Poster.jpg)
 
