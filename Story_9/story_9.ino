@@ -174,14 +174,14 @@ void story7() {
 void story8() {
   int distance = sonar.ping_cm();
 
-  if distance < 13 and distance > 0 {
-    stop();
+  if (distance < 13 && distance > 0) {
+    stop(500);
 
-    delay(500);
-
+    rev(500,255,255)
+    
     left(850);
 
-    stop();
+    stop(0);
   } else {
     forward(50,255,255);
   }
