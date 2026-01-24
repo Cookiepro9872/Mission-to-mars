@@ -52,9 +52,10 @@ void right(int delaytime) {
   delay(delaytime);
 }
 
-void stop() {
+void stop(int delaytime) {
   digitalWrite(LEFT_ENABLE, LOW);
   digitalWrite(RIGHT_ENABLE, LOW);
+  delay(delaytime);
 }
 
 void forward_count(int count, int speed) {
@@ -87,8 +88,7 @@ void setup()
 void story4() {
   forward(5000, 255, 255);
 
-  stop();
-  delay(1000);
+  stop(1000);
 
   rev(2000, 255, 255);
 }
@@ -151,7 +151,7 @@ void loop()
 
   right(850);
 
-  stop();
+  stop(0);
 
   exit(0);
 

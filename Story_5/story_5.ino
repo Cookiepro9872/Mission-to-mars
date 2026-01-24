@@ -43,11 +43,13 @@ void right(int delaytime) {
   digitalWrite(RIGHT_FWD, LOW);
   digitalWrite(LEFT_ENABLE, HIGH);
   digitalWrite(RIGHT_ENABLE, HIGH);
+  delay(delaytime);
 }
 
-void stop() {
+void stop(int delaytime) {
   digitalWrite(LEFT_ENABLE, LOW);
   digitalWrite(RIGHT_ENABLE, LOW);
+  delay(delaytime);
 }
 
 void setup()
