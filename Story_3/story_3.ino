@@ -40,5 +40,9 @@ void loop()
   
   digitalWrite(LEFT_ENABLE, LOW);
   digitalWrite(RIGHT_ENABLE, LOW);
+  digitalWrite(LEFT_FWD, LOW);
+  digitalWrite(LEFT_REV, LOW);
+  digitalWrite(RIGHT_FWD, LOW);
+  digitalWrite(RIGHT_REV, LOW);
  
 }
