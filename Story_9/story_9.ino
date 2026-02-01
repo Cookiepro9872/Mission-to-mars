@@ -190,7 +190,7 @@ void loop()
 {
   int disdown = sonar.ping_cm();
 
-  if disdown > 11 and disdown < 0 {
+  if disdown > 11 and disdown > 0 {
     stop(0);
 
     rev(500, 255, 255);
