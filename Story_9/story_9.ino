@@ -19,6 +19,7 @@ volatile int rightcounter = 0;
 #define MAX_DISTANCE 200
 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+NewPing sonar_down(TRIGGER_DOWN, ECHO_DOWN, MAX_DISTANCE)
 
 const int TRIGGER_DOWN = 13;
 const int ECHO_DOWN = 17;
@@ -190,7 +191,7 @@ void loop()
 {
   int disdown = sonar.ping_cm();
 
-  if disdown > 11 and disdown > 0 {
+  if disdown > 11 and disdown != 0 {
     stop(0);
 
     rev(500, 255, 255);
